@@ -79,7 +79,7 @@ Mixins
 		} @else {
 			@include guttersGenerate($gutterOveride);
 			.row-#{strip-units($gutterOveride)} {
-				@include gutterGenerate($gutterOveride);
+				@include guttersGenerate($gutterOveride);
 			}
 		}
 	}
