@@ -1,0 +1,37 @@
+.grid__one li {
+	@include spang(6,12);
+	@include spang(3,12,medium);
+	@include spang(4,12,small);
+	div {
+		background: red;
+		@extend .panel;
+	}
+}
+
+.grid__two li {
+	@include spang(4,12);
+	@include spang(6,12,medium);
+	div {
+		background: green;
+		@extend .panel;
+	}
+}
+
+.grid__three li {
+	@include spang(6,12);
+	@include spang(12,12,medium);
+	div {
+		background: blue;
+		@extend .panel;
+	}
+}
+
+.grid__spacer__left {
+	@include spang(3,12);
+}
+
+.grid__spacer__right {
+	@include spang(6,12);
+	@include spacer-left(3,12);
+	@include spacer-left(1,12,medium);
+}
