@@ -18,6 +18,10 @@ Functions
 	@return $columnCount / $totalCol * $max-width;
 }
 
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
 /* 
 -------------
 Mixins
@@ -65,15 +69,18 @@ Mixins
 			width: span($columnCount, $totalCol);
 			float: left;
 			//@include gutters();
-			// No gutters added. Assumes mixin has already been called without a media query.
+			// No gutters added. Assumes mixin has already been called without a $mediaQuery argument.
 		}
 	} @else {
 		width: span($columnCount, $totalCol);
 		float: left;
-		@if $gutterOveride != false {
+		@if $gutterOveride == false {
 			@include gutters();
 		} @else {
 			@include guttersGenerate($gutterOveride);
+			.row-#{strip-units($gutterOveride)} {
+				@include gutterGenerate($gutterOveride);
+			}
 		}
 	}
 }
