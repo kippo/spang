@@ -59,7 +59,7 @@ Mixins
 
 /* Create Column Widths & Apply Responsive Gutters */
 
-@mixin spang($columnCount, $totalCol, $mediaQuery:false) {
+@mixin spang($columnCount, $totalCol, $mediaQuery:false, $gutterOveride:false) {
 	@if $mediaQuery != false {
 		@include media-query($mediaQuery) {
 			width: span($columnCount, $totalCol);
@@ -70,7 +70,11 @@ Mixins
 	} @else {
 		width: span($columnCount, $totalCol);
 		float: left;
-		@include gutters();
+		@if $gutterOveride != false {
+			@include gutters();
+		} @else {
+			@include guttersGenerate($gutterOveride);
+		}
 	}
 }
 
