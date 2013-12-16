@@ -1,0 +1,84 @@
+/* Colour */
+
+$brand-green: #8cc63e;
+$brand-blue: #0082c8;
+
+$dark-blue: #2a2f3c;
+$light-blue: #ebf5fb;
+$light-green: #f6f9ee;
+
+$my-home: #cd82b0;
+$my-job: #a299c8;
+$my-day: #d57160;
+$my-health-skills: #e9b121;
+$my-funding: #68afa6;
+$out-time-out: #6fbef2;
+
+/* Sizing Units */
+
+$xx-small-unit: 4px;
+$x-small-unit: 8px;
+$small-unit: 12px;
+$default-unit: 16px;
+$large-unit: 24px;
+$x-large-unit: 32px;
+$xx-large-unit: 40px;
+$xxx-large-unit: 48px;
+$xxxx-large-unit: 64px;
+$xxxxx-large-unit: 80px;
+
+$base-font-size: 20px;
+$medium-font-size: 18px;
+$small-font-size: 16px;
+
+$container-width: 1072px;
+
+$panel-padding: $default-unit;
+
+/* Type */
+
+$line-height: 24px;
+
+$myriad: "Myriad W01 Regular";
+$myriadItal: "Myriad W01 It";
+$myriadBold: "Myriad W01 Bd";
+$myriadItal: "Myriad W01 Bd It";
+
+/* 
+Breakpoints (Breakpoint keyword, Desktop first breakpoint).
+DONT DELETE (Grid System Uses This)
+*/
+
+$site-breakpoints:
+	(micro, 320px),
+	(small, 480px),
+	(medium, 768px),
+	(massive, 900px)
+;
+
+/*
+Gutters (Breakpoint keyword, Gutter width)
+DONT DELETE (Media Queries & Grid System Uses This)
+*/
+
+$desktop-gutters: $x-large-unit;
+
+$site-gutters: 
+	(massive, 2px),
+	(medium, $large-unit),
+	(small, $default-unit)
+;
+
+/* Border Radius */
+
+$border-radius: $xx-small-unit;
+
+/* Reset */
+
+*	{ 
+	box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
